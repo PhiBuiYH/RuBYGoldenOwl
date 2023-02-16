@@ -21,7 +21,7 @@ p {
   <h1>Cart</h1>
   <% if @cart.orderables.count > 0 %>
     <%= render "cart/orderables" %>
-    <p>Total: <%= @cart.total %></p>
+    <p>Total in Cart: <%= @cart.total %></p>
   <% else %>
     <h2>Your cart is empty</h2>
   <% end %>
