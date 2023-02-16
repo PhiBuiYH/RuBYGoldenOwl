@@ -3,18 +3,18 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-*Download sourcecode : git clone https://github.com/PhiBuiYH/RuBYGoldenOwl.git
-*Then : 
+* Download sourcecode : git clone https://github.com/PhiBuiYH/RuBYGoldenOwl.git
+* Then : 
 bundle install 
-*rails db:migrate
-*rails s 
+* rails db:migrate
+* rails s 
 
 
-*Create model and controller : 
-*rails g scaffold product name description:text price:decimal image:string
-*rails g controller cart show
-*rails g model cart
-*rails g model orderable product:belongs_to cart:belongs_to quantity:integer
+* Create model and controller : 
+* rails g scaffold product name description:text price:decimal image:string
+* rails g controller cart show
+* rails g model cart
+* rails g model orderable product:belongs_to cart:belongs_to quantity:integer
 
 
 Things you may want to cover:
