@@ -19,10 +19,17 @@
     <%= product.price %>
       
         <p>
+      
     <%= form_with(url: cart_add_path) do |f| %>
       <%= f.hidden_field :id, value: product.id %>
       <%= f.number_field :quantity, value: 0, min: 1 %>
+
+       <% if @cart.orderables.map(&:product_id).include?(product.id)  %>
+    
+      <% puts "Gio hang da dc them" %>
+      <% else %>
       <%= f.submit "Add To Cart" %>
+       <% end %>
     <% end %>
       </p>
   </div>
