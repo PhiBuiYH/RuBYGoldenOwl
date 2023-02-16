@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema[7.0].define(version: 2023_02_15_154739) do
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+=======
 ActiveRecord::Schema[7.0].define(version: 2023_02_15_152905) do
+>>>>>>> master
   create_table "orderables", force: :cascade do |t|
     t.integer "product_id", null: false
     t.integer "cart_id", null: false
