@@ -27,7 +27,7 @@
        <% if @cart.orderables.map(&:product_id).include?(product.id)  %>
  
      <p>The product has been added to cart </p>
-     <%= image_tag (product.image), alt: 'fun' %>
+    
   
       <% else %>
       <%= f.submit "Add To Cart" %>
