@@ -4,10 +4,8 @@ class CartController < ApplicationController
   end
 
   def add
-    binding.pry
     @product = Product.find_by(id: params[:id])
     quantity = params[:quantity].to_i
-    binding.pry
     current_orderable = @cart.orderables.find_by(product_id: @product.id)
     if current_orderable && quantity > 0
       current_orderable.update(quantity:)
