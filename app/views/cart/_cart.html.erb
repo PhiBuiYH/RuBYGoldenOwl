@@ -1,9 +1,29 @@
+<html>
+<head>
+<style>
+body {
+    background-color: #93B874;
+}
+h1 {
+    background-color: orange;
+}
+h2
+{
+  background-color: blue;
+}
+
+p {
+    background-color: rgb(255,0,0);
+}
+</style>
+</head>
 <%= turbo_frame_tag "cart" do %>
   <h1>Cart</h1>
   <% if @cart.orderables.count > 0 %>
     <%= render "cart/orderables" %>
     <p>Total: <%= @cart.total %></p>
   <% else %>
-    <p>Your cart is empty</p>
+    <h2>Your cart is empty</h2>
   <% end %>
 <% end %>
+</html>

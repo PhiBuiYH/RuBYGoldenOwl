@@ -6,12 +6,17 @@
       <%= product.name %>
       <strong>Description:</strong>
       <%= product.description %>
+        <p>
+    <strong>Image:</strong>
+  
+    <%= image_tag (product.image), alt: 'fun' %>
+  </p> 
       <strong>Price:</strong>
       <%= product.price %>
       <%= form_with(url: cart_add_path) do |f| %>
         <%= f.hidden_field :id, value: product.id %>
         <%= f.number_field :quantity, value: orderable.quantity, min: 0 %>
-        <%= f.submit "Add To Cart" %>
+        <%= f.submit "Update Cart" %>
       <% end %>
       <%= form_with(url: cart_remove_path) do |f| %>
         <%= f.hidden_field :id, value: orderable.id %>
